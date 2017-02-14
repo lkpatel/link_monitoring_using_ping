@@ -14,13 +14,13 @@ insert into link_info values('1','172.20.21.97','172.20.21.98','t');
 
 #For running script use following command
 
-python link_monitor.py
+python monitor_links.py
 
 #schedule the script
 #If you want to run this script periodically. you may add a entry to cron
 
 chmod +x link_monitor.py
 
-*/5 * * * * <linux login id> python /<your script location>/monitor_links.py
+*/5 * * * * test_user python /home/test_user/monitor_links.py
 
 # the above entry in cron will make script to run on every 5 minute
