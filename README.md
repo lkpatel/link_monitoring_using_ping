@@ -3,7 +3,8 @@ Links monitoring using ping
 
 Recently I faced a situation, where I need to monitor a link without using SNMP. So I wrote a python script to monitor link. Script is general purpose and it can be used to monitor any number for links.
 
-#run this command in sql terminal of postgresql database for db table creation
+#Prepare database
+#Run this command in sql terminal of postgresql database for db table creation
 
 create table link_info(link_id int,interface_ip1 inet,interface_ip2 inet,link_status boolean,last_updated timestamp(0) default now());
 
@@ -15,6 +16,7 @@ insert into link_info values('1','172.20.21.97','172.20.21.98','t');
 
 python link_monitor.py
 
+#schedule the script
 #If you want to run this script periodically. you may add a entry to cron
 
 chmod +x link_monitor.py
