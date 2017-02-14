@@ -1,6 +1,8 @@
 # link_monitoring_using_ping
 Links monitoring using ping
 
+Recently I faced a situation, where I need to monitor a link without using SNMP. So I wrote a python script to monitor link. Script is general purpose and it can be used to monitor any number for links.
+
 #run this command in sql terminal of postgresql database for db table creation
 
 create table link_info(link_id int,interface_ip1 inet,interface_ip2 inet,link_status boolean,last_updated timestamp(0) default now());
